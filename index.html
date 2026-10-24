@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para ti, mi amor ❤️</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  color: #852c52;
+  background: linear-gradient(145deg,#ffe0eb,#ffc0d2,#fff0e3);
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 560px;
+  margin: auto;
+  padding: 35px 18px 65px;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { color: #b82d68; }
+
+button {
+  background: #b82d68;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 22px;
+  font-size: 16px;
+  margin: 7px;
+  cursor: pointer;
+}
+
+.regalo {
+  font-size: 115px;
+  cursor: pointer;
+  animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+  50% { transform: scale(1.12); }
+}
+
+#historia, #final { display: none; }
+
+.marco {
+  background: white;
+  padding: 12px 12px 25px;
+  border-radius: 20px;
+  margin: 25px 0;
+  box-shadow: 0 10px 35px #a34b7055;
+}
+
+.marco img {
+  width: 100%;
+  height: 390px;
+  object-fit: contain;
+  background: #fff1f5;
+  border-radius: 12px;
+}
+
+#contador { font-weight: bold; }
+
+.corazon {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  animation: subir 6s linear forwards;
+}
+
+@keyframes subir {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+.familia {
+  margin: 35px auto;
+}
+
+.nombre {
+  font-size: 25px;
+  margin: 17px;
+  opacity: 0;
+  animation: aparecer 1s forwards;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carta {
+  background: #fffafc;
+  border-radius: 22px;
+  padding: 27px 23px;
+  margin-top: 35px;
+  line-height: 1.9;
+  font-size: 17px;
+  box-shadow: 0 10px 30px #a34b7040;
+}
+
+.carta p { margin-bottom: 22px; }
+
+.firma {
+  font-weight: bold;
+  color: #b82d68;
+}
+
+@media (max-width: 480px) {
+  .marco img { height: 330px; }
+  h1 { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+
+<main>
+  <section id="inicio">
+    <h1>Para ti, mi amor ❤️</h1>
+    <p>Hoy tenemos una sorpresa muy especial para ti...</p>
+    <div class="regalo" onclick="abrir()">🎁</div>
+    <button onclick="abrir()">Abrir mi sorpresa ❤️</button>
+  </section>
+
+  <section id="historia">
+    <h1>🎂 ¡Feliz cumpleaños, mi amor!</h1>
+    <h2>❤️ Nuestra historia ❤️</h2>
+    <p>
+      Cada fotografía guarda un recuerdo
+      de todo lo que hemos vivido juntos.
+    </p>
+
+    <div class="marco">
+      <img id="foto" alt="Recuerdo familiar">
+      <p id="contador">Fotografía 1 de 36</p>
+    </div>
+
+    <button onclick="anterior()">❮ Anterior</button>
+    <button onclick="siguiente()">Siguiente ❯</button>
+
+    <div>
+      <button id="automatico" onclick="alternarPresentacion()">
+        ▶️ Iniciar presentación
+      </button>
+    </div>
+
+    <button id="botonMusica" onclick="alternarMusica()">
+      🎵 Reproducir música
+    </button>
+
+    <p>Al terminar nuestros recuerdos, hay algo más para ti. ❤️</p>
+
+    <button onclick="mostrarFinal()">
+      💌 Ver nuestra dedicatoria
+    </button>
+  </section>
+
+  <section id="final">
+    <h1>❤️ ¡Feliz cumpleaños! ❤️</h1>
+    <p>Hoy queremos regalarte estas palabras...</p>
+
+    <div class="familia">
+      <h2>Con todo el amor de:</h2>
+      <div class="nombre" style="animation-delay:.4s">❤️ Benjamín</div>
+      <div class="nombre" style="animation-delay:1.2s">❤️ Amaral</div>
+      <div class="nombre" style="animation-delay:2s">❤️ Rafaela</div>
+      <div class="nombre" style="animation-delay:2.8s">❤️ Renata</div>
+      <div class="nombre" style="animation-delay:3.6s">❤️ Víctor</div>
+    </div>
+
+    <div class="carta">
+      <h2>❤️ Para ti, mi amor ❤️</h2>
+
+      <p>
+        Hoy es un día muy especial, porque estamos celebrando
+        la vida de una mujer maravillosa, una mujer que significa
+        muchísimo para nuestra familia.
+      </p>
+
+      <p>
+        Mi amor, hemos vivido tantos momentos juntos,
+        alegrías, dificultades, risas y experiencias
+        que han ido formando nuestra historia.
+        Y si hay algo hermoso que nos ha regalado
+        la vida, es nuestra familia.
+      </p>
+
+      <p>
+        Hoy queremos desearte un muy feliz cumpleaños,
+        no solamente yo, sino también
+        <strong>Rafaela, Renata, Benjamín y Amaral.</strong>
+        Cada uno, a su manera, quiere entregarte
+        todo su cariño y recordarte lo importante
+        que eres en nuestras vidas.
+      </p>
+
+      <p>
+        Gracias por tu amor, por tu paciencia,
+        por tu esfuerzo y por estar presente
+        en tantos momentos de nuestras vidas.
+      </p>
+
+      <p>
+        Quizás no siempre te decimos lo mucho que
+        te queremos, pero hoy queremos que sepas
+        que eres una persona muy especial
+        para todos nosotros.
+      </p>
+
+      <p>
+        Deseamos que este nuevo año de vida venga
+        lleno de felicidad, salud, sueños cumplidos
+        y muchos momentos hermosos que podamos
+        seguir compartiendo como familia.
+      </p>
+
+      <h2>Feliz cumpleaños, mi amor. 🎂❤️</h2>
+
+      <p>
+        Que nunca te falten motivos para sonreír
+        y que siempre recuerdes cuánto te queremos.
+      </p>
+
+      <p class="firma">
+        Con todo nuestro amor:<br>
+        Benjamín, Amaral, Rafaela, Renata<br>
+        y yo, tu Víctor, que te amo muchísimo.
+      </p>
+
+      <h2>¡Te amamos muchísimo! ❤️</h2>
+    </div>
+
+    <button onclick="volverInicio()">
+    🎁 Volver a ver mi sorpresa ❤️
+</button>
+
+  </section>
+</main>
+
+<audio id="musica" src="musica/cancion.mp3" loop></audio>
+
+<script>
+const total = 36;
+let actual = 1;
+let intervalo = null;
+
+function mostrarFoto() {
+  const imagen = document.getElementById("foto");
+  imagen.src = "fotos/foto (" + actual + ").jpeg";
+  document.getElementById("contador").textContent =
+    "Fotografía " + actual + " de " + total;
+}
+
+function abrir() {
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("historia").style.display = "block";
+    mostrarFoto();
+    lanzarCorazones();
+    document.getElementById("musica").play();
+}
+
+function volverInicio() {
+    document.getElementById("final").style.display = "none";
+    document.getElementById("historia").style.display = "none";
+    document.getElementById("inicio").style.display = "block";
+
+    actual = 1;
+    clearInterval(intervalo);
+    intervalo = null;
+
+    const musica = document.getElementById("musica");
+    musica.pause();
+    musica.currentTime = 0;
+
+    window.scrollTo(0, 0);
+}
+
+function siguiente() {
+  actual = actual < total ? actual + 1 : 1;
+  mostrarFoto();
+}
+
+function anterior() {
+  actual = actual > 1 ? actual - 1 : total;
+  mostrarFoto();
+}
+
+function alternarPresentacion() {
+  const boton = document.getElementById("automatico");
+
+  if (intervalo) {
+    clearInterval(intervalo);
+    intervalo = null;
+    boton.textContent = "▶️ Iniciar presentación";
+  } else {
+    intervalo = setInterval(siguiente, 4500);
+    boton.textContent = "⏸️ Pausar presentación";
+  }
+}
+
+function alternarMusica() {
+  const audio = document.getElementById("musica");
+  const boton = document.getElementById("botonMusica");
+
+  if (audio.paused) {
+    audio.play().then(() => {
+      boton.textContent = "⏸️ Pausar música";
+    }).catch(() => {
+      alert("Agrega cancion.mp3 en la carpeta musica.");
+    });
+  } else {
+    audio.pause();
+    boton.textContent = "🎵 Reproducir música";
+  }
+}
+
+function mostrarFinal() {
+  if (intervalo) {
+    clearInterval(intervalo);
+    intervalo = null;
+  }
+
+  document.getElementById("historia").style.display = "none";
+  document.getElementById("final").style.display = "block";
+  window.scrollTo(0, 0);
+  lanzarCorazones();
+}
+
+function lanzarCorazones() {
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const corazon = document.createElement("span");
+      corazon.className = "corazon";
+      corazon.textContent = "❤️";
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+      document.body.appendChild(corazon);
+      setTimeout(() => corazon.remove(), 6000);
+    }, i * 140);
+  }
+}
+</script>
+</body>
+</html>
